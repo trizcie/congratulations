@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONGRATULATIONS!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(37, 43, 59);
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            height: 600px;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(10, 12, 19);
+            position: relative;
+        }
+        #duo1, #duo2 {
+            height: 350px;
+            width: 350px;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            transition: opacity 0.5s ease;
+            position: absolute;
+        }
+        .first {
+            opacity: 1;
+        }
+        .second {
+            opacity: 0;
+        }
+        .message {
+            height: 100px;
+            width: 440px;
+            top: 1%;
+            left: 50%;
+            transform: translate(-50%);
+            transition: opacity 0.5s ease;
+            position: absolute;
+            opacity: 0;
+            background-color: aliceblue;
+            font-size: 32px;
+            font-family: 'Fredoka', sans-serif;
+            letter-spacing: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+        .star {
+            transition: opacity 0.5s ease;
+            position: absolute;
+            z-index: 2;
+        }
+        .star.one {
+            top: 0;
+            left: 460px;
+            opacity: 0;
+        }
+        .star.two {
+            bottom: 40px;
+            left: 460px;
+            opacity: 0;
+        }
+        .star.three {
+            top: 0;
+            right: 460px;
+            opacity: 0;
+        }
+        .star.four {
+            bottom: 40px;
+            right: 460px;
+            opacity: 0;
+        }
+        .star.five {
+            bottom: 490px;
+            right: 210px;
+            opacity: 0;
+            z-index: 5;
+        }
+        .star.six {
+            bottom: 490px;
+            left: 210px;
+            opacity: 0;
+            z-index: 5;
+        }
+        #cato {
+            position: absolute;
+            z-index: 4;
+            left: 90px;
+            bottom: 25%;
+            opacity: 0;
+            border-radius: 100%;
+        }
+        #cato2 {
+            position: absolute;
+            right: 90px;
+            bottom: 25%;
+            z-index: 4;
+            opacity: 0;
+            border-radius: 100%;
+        }
+        button {
+            position: absolute;
+            padding: 20px;
+            border-radius: 100%;
+            font-size: 32px;
+            font-family: 'Fredoka', sans-serif;
+            cursor: pointer;
+            background-color: #1E2050;
+            color: rgb(248, 235, 225);
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: top 0.3s ease;
+            z-index: 1;
+        }
+        #line {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            z-index: 4;
+            position: absolute;
+            bottom: 0px;
+            letter-spacing: 10px;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "rgb(138, 217, 253)";
+
+            var button = document.querySelector('button');
+            button.style.top = '80%';
+            button.style.backgroundColor = "rgb(250, 215, 245)";
+            button.style.color = "#000000";
+            button.style.border = "rgb(117, 89, 69)"; 
+            
+            var container = document.querySelector('#container');
+            container.style.backgroundColor = "blanchedalmond";
+            container.style.border = "20px solid rgb(105, 80, 63)";
+
+            var first = document.querySelector('.first'); 
+            var second = document.querySelector('.second'); 
+
+            first.classList.remove('first');
+            second.classList.add('first'); 
+            second.classList.remove('second'); 
+            first.classList.add('second'); 
+
+            var duo1 = document.querySelectorAll('#duo1');
+            duo1.forEach(function(duo1) {
+                duo1.style.top = "20%";
+            });
+
+            var duo2 = document.querySelectorAll('#duo2');
+            duo2.forEach(function(duo2) {
+                duo2.style.top = "20%";
+            });
+
+            var message = document.querySelector('.message');
+            message.style.opacity = '1';
+
+            var stars = document.querySelectorAll('.star');
+            stars.forEach(function(star) {
+                star.style.opacity = '1';
+            });
+
+            var cato = document.querySelector('#cato');
+            cato.style.opacity = '1';
+            cato.style.border = "20px solid rgb(105, 80, 63)";
+
+            var cato2 = document.querySelector('#cato2');
+            cato2.style.opacity = '1';
+            cato2.style.border = "20px solid rgb(105, 80, 63)";
+
+            var line = document.querySelector('#line');
+            line.style.opacity = '1';
+        }
+    </script>
+</head>
+<body>
+    <img class="star one" src="/duo/vecteezy_cute-yellow-doodle-star-smile-face-eyes-closed-png_24223206.png" alt="star" height="100px" width="100px">
+    <img class="star two" src="/duo/vecteezy_cute-yellow-doodle-star-smile-face-eyes-closed-png_24223206.png" alt="star" height="100px" width="100px">
+    <img class="star three" src="/duo/vecteezy_cute-yellow-doodle-star-smile-face-eyes-closed-png_24223206.png" alt="star" height="100px" width="100px">
+    <img class="star four" src="/duo/vecteezy_cute-yellow-doodle-star-smile-face-eyes-closed-png_24223206.png" alt="star" height="100px" width="100px">
+    <img class="star five" src="/duo/vecteezy_cute-yellow-doodle-star-smile-face-eyes-closed-png_24223206.png" alt="star" height="100px" width="100px">
+    <img class="star six" src="/duo/vecteezy_cute-yellow-doodle-star-smile-face-eyes-closed-png_24223206.png" alt="star" height="100px" width="100px">
+    <img id="cato" src="/duo/shocked-surprised.gif" alt="shockcat" height="300px" width="300px">
+    <img id="cato2" src="/duo/omg-schock.gif" alt="shockcat" height="300px" width="300px">
+    <div id="container">
+        <button onclick="changeBackgroundColor()">play</button>
+        <img id="duo1" class="first" src="/duo/dglht1f-bf71c6cd-d64c-421a-bb8d-ffe165703d9b (1).png" alt="angryduo">
+        <img id="duo2" class="second" src="/duo/Untitled design (1)_processed (1) (1).png" alt="happyduo">
+        <div class="message">
+            <p>CONGRATULATIONS ON YOUR 200th STREAK !!</p>
+        </div>
+        <div id="line">
+            <p>Stebbb! You did it:)</p>
+        </div>
+    </div>
+</body>
+</html>
